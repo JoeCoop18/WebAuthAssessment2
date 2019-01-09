@@ -4,6 +4,12 @@ window.onload = function() {
 
 function init() {
   console.log("init fired");
+  addToBasket();
+
+  if (document.getElementById('cc') !== null) {
+    var slideIndex = 1;
+    currentSlide(slideIndex);
+  }
 }
 
 function open_menu() {
@@ -14,10 +20,6 @@ function close_menu() {
   document.getElementById("menu").style.width = "0%";
 }
 
-if (document.getElementsByClassName("slides")) {
-  var slideIndex = 1;
-  currentSlide(slideIndex);
-}
 
 function plusSlides(n) {
   showSlides(slideIndex += n);
@@ -56,7 +58,7 @@ var sel1 = document.getElementById('select1');
 var sel2 = document.getElementById('select2');
 var sel3 = document.getElementById('select3');
 
-if (sel1) {
+if (sel1 !== null) {
   sel1.addEventListener('change', function() {
     var visItem = document.getElementById(this.value);
     visItem.className = "shirt visible";
@@ -94,31 +96,55 @@ if (sel1) {
   });
 }
 
+var basket = [];
+
+if (typeof(Storage) !== "undefined") {
+
+  if (localStorage.getItem("basket") !== null) {
+    basket = JSON.parse(localStorage.getItem("basket") || []);
+  }
+  else {
+    localStorage.setItem("basket", JSON.stringify(basket));
+  }
+
+}
+
 var shirtBtn = document.getElementById("shirtBtn");
 var posterBtn = document.getElementById("posterBtn");
 var mugBtn = document.getElementById("mugBtn");
 
-var basket = [];
-
-if (shirtBtn) {
+if (shirtBtn !== null) {
   shirtBtn.addEventListener('click', function() {
     basket.push(sel1.value);
+    localStorage.setItem("basket", JSON.stringify(basket));
     console.log(basket);
   });
 
   posterBtn.addEventListener('click', function() {
     basket.push(sel2.value);
+    localStorage.setItem("basket", JSON.stringify(basket));
     console.log(basket);
   });
 
   mugBtn.addEventListener('click', function() {
     basket.push(sel3.value);
+    localStorage.setItem("basket", JSON.stringify(basket));
     console.log(basket);
   });
 }
 
-if (document.getElementsByClassName("inBasket")) {
-  for (var item in basket) {
+function addToBasket() {
+  console.log("Hello");
 
+  basket = JSON.parse(localStorage.getItem("basket") || []);
+  console.log(basket);
+
+  for (var item in basket) {
+    var para = document.createElement("p");
+    var node = document.createTextNode(item);
+    para.appendChild(node);
+
+    var element = getElementById('inBasket');
+    element.appendChild(para);
   }
 }
