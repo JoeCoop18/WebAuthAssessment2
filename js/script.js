@@ -4,8 +4,6 @@ window.onload = function() {
 
 function init() {
   console.log("init fired");
-  var slideIndex = 1;
-  currentSlide(slideIndex);
 }
 
 function open_menu() {
@@ -16,6 +14,10 @@ function close_menu() {
   document.getElementById("menu").style.width = "0%";
 }
 
+if (document.getElementsByClassName("slides")) {
+  var slideIndex = 1;
+  currentSlide(slideIndex);
+}
 
 function plusSlides(n) {
   showSlides(slideIndex += n);
@@ -54,41 +56,43 @@ var sel1 = document.getElementById('select1');
 var sel2 = document.getElementById('select2');
 var sel3 = document.getElementById('select3');
 
-sel1.addEventListener('change', function() {
-  var visItem = document.getElementById(this.value);
-  visItem.className = "shirt visible";
+if (sel1) {
+  sel1.addEventListener('change', function() {
+    var visItem = document.getElementById(this.value);
+    visItem.className = "shirt visible";
 
-  if (this.value == "shirt1") {
-    document.getElementById("shirt2").className = "shirt hidden";
-  }
-  else {
-    document.getElementById("shirt1").className = "shirt hidden";
-  }
-});
+    if (this.value == "shirt1") {
+      document.getElementById("shirt2").className = "shirt hidden";
+    }
+    else {
+      document.getElementById("shirt1").className = "shirt hidden";
+    }
+  });
 
-sel2.addEventListener('change', function() {
-  var visItem = document.getElementById(this.value);
-  visItem.className = "poster visible";
+  sel2.addEventListener('change', function() {
+    var visItem = document.getElementById(this.value);
+    visItem.className = "poster visible";
 
-  if (this.value == "poster1") {
-    document.getElementById("poster2").className = "poster hidden";
-  }
-  else {
-    document.getElementById("poster1").className = "poster hidden";
-  }
-});
+    if (this.value == "poster1") {
+      document.getElementById("poster2").className = "poster hidden";
+    }
+    else {
+      document.getElementById("poster1").className = "poster hidden";
+    }
+  });
 
-sel3.addEventListener('change', function() {
-  var visItem = document.getElementById(this.value);
-  visItem.className = "mug visible";
+  sel3.addEventListener('change', function() {
+    var visItem = document.getElementById(this.value);
+    visItem.className = "mug visible";
 
-  if (this.value == "mug1") {
-    document.getElementById("mug2").className = "mug hidden";
-  }
-  else {
-    document.getElementById("mug1").className = "mug hidden";
-  }
-});
+    if (this.value == "mug1") {
+      document.getElementById("mug2").className = "mug hidden";
+    }
+    else {
+      document.getElementById("mug1").className = "mug hidden";
+    }
+  });
+}
 
 var shirtBtn = document.getElementById("shirtBtn");
 var posterBtn = document.getElementById("posterBtn");
@@ -96,17 +100,25 @@ var mugBtn = document.getElementById("mugBtn");
 
 var basket = [];
 
-shirtBtn.addEventListener('click', function() {
-  basket.push(sel1.value);
-  console.log(basket);
-});
+if (shirtBtn) {
+  shirtBtn.addEventListener('click', function() {
+    basket.push(sel1.value);
+    console.log(basket);
+  });
 
-posterBtn.addEventListener('click', function() {
-  basket.push(sel2.value);
-  console.log(basket);
-});
+  posterBtn.addEventListener('click', function() {
+    basket.push(sel2.value);
+    console.log(basket);
+  });
 
-mugBtn.addEventListener('click', function() {
-  basket.push(sel3.value);
-  console.log(basket);
-});
+  mugBtn.addEventListener('click', function() {
+    basket.push(sel3.value);
+    console.log(basket);
+  });
+}
+
+if (document.getElementsByClassName("inBasket")) {
+  for (var item in basket) {
+
+  }
+}
