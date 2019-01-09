@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Coldplay</title>
+    <link href="css/styles.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Permanent+Marker" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Amatic+SC" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  </head>
+
+  <body>
+    <div class="store_page_header">
+      <!-- Title -->
+      <h1 class="page_title">Store</h1>
+
+      <!-- Menu -->
+      <div id="menu" class="menu_overlay">
+        <a href="javascript:void(0)" class="close_menu_btn" onclick="close_menu()">&times;</a>
+        <div class="menu_overlay_content">
+          <a href="index.html">Home</a>
+          <a href="about.html">About</a>
+          <a href="media.html">Media</a>
+        </div>
+      </div>
+      <span class="menu_btn" onclick="open_menu()">&#9776;</span>
+      <a href="basketPage.html" class="cart"><span></span></a>
+    </div>
+
+
+
+    <div class="grid_container">
+      <div class="item1">
+        <img class="shirt visible" id="shirt1" src="assets/t-shirt-black.png">
+        <img class="shirt hidden" id="shirt2" src="assets/t-shirt-white.png">
+
+        <p>Coldplay T-Shirt</p>
+
+        <select class="selector" id="select1">
+          <option value="shirt1">Black</option>
+          <option value="shirt2">White</option>
+        </select>
+
+        <p>£24.99</p>
+
+        <button id="shirtBtn" class="basket">Add to Basket</button>
+      </div>
+
+      <div class="item2">
+        <img class="poster visible" id="poster1" src="assets/coldplay_poster_mx.png">
+        <img class="poster hidden" id="poster2" src="assets/coldplay_poster_yellow.png">
+
+        <p>Coldplay Poster</p>
+
+        <select class="selector" id="select2">
+          <option value="poster1">Mylo Xyloto</option>
+          <option value="poster2">Yellow</option>
+        </select>
+
+        <p>£11.99</p>
+
+        <button id="posterBtn" class="basket">Add to Basket</button>
+      </div>
+
+      <div class="item3">
+        <img class="mug visible" id="mug1" src="assets/coldplay_mug_fix_you.png">
+        <img class="mug hidden" id="mug2" src="assets/coldplay_mug_stars.png">
+
+        <p>Coldplay Mug</p>
+
+        <select class="selector" id="select3">
+          <option value="mug1">Fix You</option>
+          <option value="mug2">Sky Full of Stars</option>
+        </select>
+
+        <p>£8.99</p>
+
+        <button id="mugBtn" class="basket">Add to Basket</button>
+      </div>
+    </div>
+
+    <div class="store_page_footer">
+      <!-- Social Media Links -->
+      <div class="footer">
+        <a href="https://www.facebook.com/coldplay" class="fa fa-facebook"></a>
+        <a href="https://twitter.com/coldplay/" class="fa fa-twitter"></a>
+        <a href="https://www.youtube.com/channel/UCDPM_n1atn2ijUwHd0NNRQw" class="fa fa-youtube"></a>
+        <a href="https://www.instagram.com/coldplay/" class="fa fa-instagram"></a>
+        <a href="https://www.tumblr.com/privacy/consent?redirect=http%3A%2F%2Fcoldplay.tumblr.com%2F" class="fa fa-tumblr"></a>
+      </div>
+    </div>
+  </body>
+  <script src="js/script.js"></script>
+</html>

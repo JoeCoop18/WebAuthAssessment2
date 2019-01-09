@@ -1,0 +1,384 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  background-color: #3f3f3f;
+}
+
+img {
+  vertical-align: middle;
+}
+
+.page_title {
+  text-align: center;
+  margin: 0;
+  color: #ffffff;
+  font-family: "Permanent Marker";
+  font-size: 8rem;
+}
+
+.home_page_body p {
+  color: #ffffff;
+  font-size: 3rem;
+  font-family: "Amatic SC";
+  text-align: center;
+  margin: 10px;
+}
+
+.menu_btn {
+  position: fixed;
+  top: 20px;
+  left: 45px;
+  color: #ffffff;
+  text-shadow: 2px 2px #3f3f3f;
+  cursor: pointer;
+  font-family: "Amatic SC";
+  font-size: 4rem;
+}
+
+.menu_overlay {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: rgb(0,0,0);
+  background-color: rgba(0,0,0, 0.9);
+  overflow-x: hidden;
+  transition: 0.5s;
+}
+
+.menu_overlay_content {
+  position: relative;
+  top: 25%;
+  width: 100%;
+  text-align: center;
+  margin-top: 30px;
+}
+
+.menu_overlay a {
+  padding: 8px;
+  text-decoration: none;
+  font-family: "Amatic SC";
+  font-size: 4rem;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.menu_overlay .close_menu_btn {
+  position: absolute;
+  top: 20px;
+  right: 45px;
+  font-size: 12rem;
+}
+
+.slides {
+  display: none;
+}
+
+.carousel-container {
+  max-width: 500px;
+  position: relative;
+  margin: auto;
+}
+
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    font-size: 3rem;
+}
+
+.fa {
+  height: 5rem;
+  width: 5rem;
+  text-align: center;
+  text-decoration: none;
+  margin: 0.5rem 0.2rem;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 1.2rem;
+}
+
+.fa:hover {
+  opacity: 0.7;
+}
+
+.fa-facebook {
+  background: #3B5998;
+  color: white;
+}
+
+.fa-twitter {
+  background: #55ACEE;
+  color: white;
+}
+.fa-youtube {
+  background: #bb0000;
+  color: white;
+}
+
+.fa-instagram {
+  background: #125688;
+  color: white;
+}
+
+.fa-tumblr {
+  background: #2c4762;
+  color: white;
+}
+
+.parallax_1 {
+  height: 800px;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.parallax_2 {
+  height: 800px;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.parallax_3 {
+  height: 800px;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.parallax_4 {
+  height: 800px;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.parallax_5 {
+  height: 800px;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.parallax_6 {
+  height: 1000px;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.parallax_space_1 {
+  display: inline;
+  padding: 50px;
+  font-size: 3rem;
+  font-family: "Amatic SC";
+  text-align: center;
+  color: #ffffff;
+}
+
+.parallax_space_2 {
+  display: inline;
+  padding: 50px;
+  font-size: 3rem;
+  font-family: "Amatic SC";
+  text-align: center;
+  color: #ffffff;
+}
+
+.parallax_space_3 {
+  display: inline;
+  padding: 50px;
+  font-size: 3rem;
+  font-family: "Amatic SC";
+  text-align: center;
+  color: #ffffff;
+}
+
+.parallax_space_4 {
+  display: inline;
+  padding: 50px;
+  font-size: 3rem;
+  font-family: "Amatic SC";
+  text-align: center;
+  color: #ffffff;
+}
+
+.parallax_space_5 {
+  display: inline;
+  padding: 50px;
+  font-size: 3rem;
+  font-family: "Amatic SC";
+  text-align: center;
+  color: #ffffff;
+}
+
+.three_columns_right img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 200px;
+}
+
+.grid_container {
+  justify-content: center;
+  display: grid;
+  grid-template-columns: 300px 300px 300px;
+  grid-gap: 50px;
+  padding: 50px;
+}
+
+.grid_container > div {
+  font-family: "Amatic SC";
+  color: #ffffff;
+  text-align: center;
+  font-size: 30px;
+}
+
+.grid_container > div > img {
+  height: 250px;
+  width: 200px;
+}
+
+.grid_container > div > p {
+  padding: 5px;
+}
+
+.basket {
+  width: 200px;
+  font-family: "Amatic SC";
+  color: #000000;
+  font-size: 1em;
+}
+
+.selector {
+  width: 200px;
+  font-family: "Amatic SC";
+  color: #000000;
+  font-size: 1em;
+}
+
+.visible {
+  display: run-in;
+}
+
+.hidden {
+  display: none;
+}
+
+.cart {
+	width: 4rem;
+	height: 4rem;
+	position: absolute;
+	right: 4rem;
+	top: 4rem;
+	display: block;
+	background: url(http://images.vfl.ru/ii/1484930184/14435803/15757225.png) center no-repeat;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+/* iPhone 6s */
+@media only screen and (max-width: 1300px) {
+  .parallax_1 {
+    height: 0px;
+  }
+
+  .parallax_2 {
+    height: 0px;
+  }
+
+  .parallax_3 {
+    height: 0px;
+  }
+
+  .parallax_4 {
+    height: 0px;
+  }
+
+  .parallax_5 {
+    height: 0px;
+  }
+
+  .parallax_6 {
+    height: 0px;
+  }
+
+  .grid_container {
+    grid-template-columns: 300px;
+    grid-auto-rows: auto auto auto;
+  }
+}
