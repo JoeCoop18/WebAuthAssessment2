@@ -278,13 +278,6 @@ img {
   color: #ffffff;
 }
 
-.three_columns_right img {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 200px;
-}
-
 .grid_container {
   justify-content: center;
   display: grid;
@@ -313,14 +306,14 @@ img {
   width: 200px;
   font-family: "Amatic SC";
   color: #000000;
-  font-size: 1em;
+  font-size: 3rem;
 }
 
 .selector {
   width: 200px;
   font-family: "Amatic SC";
   color: #000000;
-  font-size: 1em;
+  font-size: 3rem;
 }
 
 .visible {
@@ -339,6 +332,24 @@ img {
 	top: 4rem;
 	display: block;
 	background: url(http://images.vfl.ru/ii/1484930184/14435803/15757225.png) center no-repeat;
+}
+
+.basketBtnDiv {
+  text-align: center;
+}
+
+.basketClear {
+  width: 100px;
+  font-family: "Amatic SC";
+  font-size: 2.5rem;
+  color: #000000;
+}
+
+#inBasket > p {
+  color: #ffffff;
+  font-family: "Amatic SC";
+  font-size: 5rem;
+  text-align: center;
 }
 
 @-webkit-keyframes fade {

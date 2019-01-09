@@ -133,18 +133,26 @@ if (shirtBtn !== null) {
   });
 }
 
-function addToBasket() {
-  console.log("Hello");
+var clearBtn = document.getElementById("clearBtn");
 
+if (clearBtn !== null) {
+  clearBtn.addEventListener('click', function() {
+    basket = [];
+    localStorage.setItem("basket", JSON.stringify(basket));
+    location.reload();
+  });
+}
+
+function addToBasket() {
   basket = JSON.parse(localStorage.getItem("basket") || []);
   console.log(basket);
 
   for (var item in basket) {
     var para = document.createElement("p");
-    var node = document.createTextNode(item);
+    var node = document.createTextNode(basket[item]);
     para.appendChild(node);
 
-    var element = getElementById('inBasket');
+    var element = document.getElementById("inBasket");
     element.appendChild(para);
-  }
+  };
 }
