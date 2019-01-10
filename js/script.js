@@ -53,6 +53,27 @@ function showSlides(n) {
 
   slides[slideIndex - 1].style.display = "block";
   dots[slideIndex - 1].className += " active";
+
+  if (slideIndex == 1) {
+    document.getElementById("desc1").className = "desc visible"
+  }
+  else {
+    document.getElementById("desc1").className = "desc hidden"
+  }
+
+  if (slideIndex == 2) {
+    document.getElementById("desc2").className = "desc visible"
+  }
+  else {
+    document.getElementById("desc2").className = "desc hidden"
+  }
+
+  if (slideIndex == 3) {
+    document.getElementById("desc3").className = "desc visible"
+  }
+  else {
+    document.getElementById("desc3").className = "desc hidden"
+  }
 }
 
 var sel1 = document.getElementById('select1');

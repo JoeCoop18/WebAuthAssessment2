@@ -327,7 +327,7 @@ img {
 .cart {
 	width: 4rem;
 	height: 4rem;
-	position: absolute;
+	position: fixed;
 	right: 4rem;
 	top: 4rem;
 	display: block;
@@ -343,6 +343,16 @@ img {
   font-family: "Amatic SC";
   font-size: 2.5rem;
   color: #000000;
+}
+
+.mbtn {
+  width: 300px;
+  font-family: "Amatic SC";
+  font-size: 3rem;
+}
+
+.ahfoda {
+  color: #5555cc;
 }
 
 #inBasket > p {
