@@ -175,11 +175,13 @@ function addToBasket() {
     }
   }
 
+  var total = ((shirt1count + shirt2count) * 24.99) + ((poster1count + poster2count) * 11.99) + ((mug1count + mug2count) * 8.99);
+
   var element = document.getElementById("inBasket");
 
   if (shirt1count > 0) {
     var para1 = document.createElement("p");
-    var node1 = document.createTextNode(shirt1count + " x Black Coldplay T-Shirt");
+    var node1 = document.createTextNode(shirt1count + " x Black Coldplay T-Shirt @ £24.99 each");
 
     para1.appendChild(node1);
     element.appendChild(para1);
@@ -187,7 +189,7 @@ function addToBasket() {
 
   if (shirt2count > 0) {
     var para2 = document.createElement("p");
-    var node2 = document.createTextNode(shirt2count + " x White Coldplay T-Shirt");
+    var node2 = document.createTextNode(shirt2count + " x White Coldplay T-Shirt @ £24.99 each");
 
     para2.appendChild(node2);
     element.appendChild(para2);
@@ -195,7 +197,7 @@ function addToBasket() {
 
   if (poster1count > 0) {
     var para3 = document.createElement("p");
-    var node3 = document.createTextNode(poster1count + " x Coldplay Mylo Xyloto Poster");
+    var node3 = document.createTextNode(poster1count + " x Coldplay Mylo Xyloto Poster @ £11.99 each");
 
     para3.appendChild(node3)
     element.appendChild(para3);
@@ -203,7 +205,7 @@ function addToBasket() {
 
   if (poster2count > 0) {
     var para4 = document.createElement("p");
-    var node4 = document.createTextNode(poster2count + " x Coldplay Yellow Poster");
+    var node4 = document.createTextNode(poster2count + " x Coldplay Yellow Poster @ £11.99 each");
 
     para4.appendChild(node4)
     element.appendChild(para4);
@@ -211,7 +213,7 @@ function addToBasket() {
 
   if (mug1count > 0) {
     var para5 = document.createElement("p");
-    var node5 = document.createTextNode(mug1count + " x Coldplay Fix You Mug");
+    var node5 = document.createTextNode(mug1count + " x Coldplay Fix You Mug @ £8.99 each");
 
     para5.appendChild(node5)
     element.appendChild(para5);
@@ -219,9 +221,17 @@ function addToBasket() {
 
   if (mug2count > 0) {
     var para6 = document.createElement("p");
-    var node6 = document.createTextNode(mug2count + " x Coldplay Sky Full of Stars Mug");
+    var node6 = document.createTextNode(mug2count + " x Coldplay Sky Full of Stars Mug @ £8.99 each");
 
     para6.appendChild(node6)
     element.appendChild(para6);
+  }
+
+  if (total > 0) {
+    var para7 = document.createElement("p");
+    var node7 = document.createTextNode("Total: £" + total);
+
+    para7.appendChild(node7)
+    element.appendChild(para7);
   }
 }
