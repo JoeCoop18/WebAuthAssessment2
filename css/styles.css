@@ -290,7 +290,7 @@ img {
   font-family: "Amatic SC";
   color: #ffffff;
   text-align: center;
-  font-size: 30px;
+  font-size: 4rem;
 }
 
 .grid_container > div > img {
@@ -374,6 +374,10 @@ img {
 
 /* iPhone 6s */
 @media only screen and (max-width: 1300px) {
+  .menu_overlay a {
+    font-size: 6rem;
+  }
+
   .parallax_1 {
     height: 0px;
   }
@@ -399,7 +403,30 @@ img {
   }
 
   .grid_container {
-    grid-template-columns: 300px;
+    grid-template-columns: 500px;
     grid-auto-rows: auto auto auto;
+  }
+
+  .grid_container > div {
+    font-size: 6rem;
+  }
+
+  .grid_container > div > img {
+    height: 500px;
+    width: 400px;
+  }
+
+  .selector {
+    width: 500px;
+    font-size: 6rem;
+  }
+
+  .basket {
+    width: 500px;
+    font-size: 6rem;
+  }
+
+  .spacer {
+    height: 100px;
   }
 }
