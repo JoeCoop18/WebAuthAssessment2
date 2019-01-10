@@ -136,7 +136,7 @@ if (shirtBtn !== null) {
 var clearBtn = document.getElementById("clearBtn");
 
 if (clearBtn !== null) {
-  clearBtn.addEventListener('click', function() {
+    clearBtn.addEventListener('click', function() {
     basket = [];
     localStorage.setItem("basket", JSON.stringify(basket));
     location.reload();
