@@ -198,6 +198,7 @@ function addToBasket() {
   }
 
   var total = ((shirt1count + shirt2count) * 24.99) + ((poster1count + poster2count) * 11.99) + ((mug1count + mug2count) * 8.99);
+  total = total.toFixed(2);
 
   var element = document.getElementById("inBasket");
 
