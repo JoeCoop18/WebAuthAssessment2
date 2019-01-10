@@ -147,12 +147,81 @@ function addToBasket() {
   basket = JSON.parse(localStorage.getItem("basket") || []);
   console.log(basket);
 
-  for (var item in basket) {
-    var para = document.createElement("p");
-    var node = document.createTextNode(basket[item]);
-    para.appendChild(node);
+  var shirt1count = 0;
+  var shirt2count = 0;
+  var poster1count = 0;
+  var poster2count = 0;
+  var mug1count = 0;
+  var mug2count = 0;
 
-    var element = document.getElementById("inBasket");
-    element.appendChild(para);
-  };
+  for (var item in basket) {
+    if (basket[item] == "shirt1") {
+      shirt1count++;
+    }
+    else if (basket[item] == "shirt2") {
+      shirt2count++;
+    }
+    else if (basket[item] == "poster1") {
+      poster1count++;
+    }
+    else if (basket[item] == "poster2") {
+      poster2count++;
+    }
+    else if (basket[item] == "mug1") {
+      mug1count++;
+    }
+    else if (basket[item] == "mug2") {
+      mug2count++;
+    }
+  }
+
+  var element = document.getElementById("inBasket");
+
+  if (shirt1count > 0) {
+    var para1 = document.createElement("p");
+    var node1 = document.createTextNode(shirt1count + " x Black Coldplay T-Shirt");
+
+    para1.appendChild(node1);
+    element.appendChild(para1);
+  }
+
+  if (shirt2count > 0) {
+    var para2 = document.createElement("p");
+    var node2 = document.createTextNode(shirt2count + " x White Coldplay T-Shirt");
+
+    para2.appendChild(node2);
+    element.appendChild(para2);
+  }
+
+  if (poster1count > 0) {
+    var para3 = document.createElement("p");
+    var node3 = document.createTextNode(poster1count + " x Coldplay Mylo Xyloto Poster");
+
+    para3.appendChild(node3)
+    element.appendChild(para3);
+  }
+
+  if (poster2count > 0) {
+    var para4 = document.createElement("p");
+    var node4 = document.createTextNode(poster2count + " x Coldplay Yellow Poster");
+
+    para4.appendChild(node4)
+    element.appendChild(para4);
+  }
+
+  if (mug1count > 0) {
+    var para5 = document.createElement("p");
+    var node5 = document.createTextNode(mug1count + " x Coldplay Fix You Mug");
+
+    para5.appendChild(node5)
+    element.appendChild(para5);
+  }
+
+  if (mug2count > 0) {
+    var para6 = document.createElement("p");
+    var node6 = document.createTextNode(mug2count + " x Coldplay Sky Full of Stars Mug");
+
+    para6.appendChild(node6)
+    element.appendChild(para6);
+  }
 }
