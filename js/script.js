@@ -4,12 +4,13 @@ window.onload = function() {
 
 function init() {
   console.log("init fired");
-  addToBasket();
 
   if (document.getElementById('cc') !== null) {
     var slideIndex = 1;
     currentSlide(slideIndex);
   }
+
+  addToBasket();
 }
 
 function open_menu() {
