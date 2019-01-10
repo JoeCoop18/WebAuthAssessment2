@@ -355,6 +355,12 @@ img {
   color: #5555cc;
 }
 
+.demovid {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;  
+}
+
 #inBasket > p {
   color: #ffffff;
   font-family: "Amatic SC";
